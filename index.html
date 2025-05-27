@@ -1,81 +1,91 @@
 <!DOCTYPE html>
-<!-- ICS2O-Unit6-01-HTML-JS -->
-<html lang="en-ca">
-
+<!--- ICD2O-6-01-HTML --->
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-status-bar-style" content="black" />
   <meta name="description" content="Multiplication with while loops, in JS" />
   <meta name="keywords" content="mths, icd2o" />
   <meta name="author" content="Lynn Lukose" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  <title>Multiplication with while loops, in JS</title>
+  <link rel="canonical" href="lynn.lukose.github.io/ICD2O-Unit-6-01-lynn.lukose-07/" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <!--- None blocking for Lighthouse report --->
+  <!--- https://stackoverflow.com/questions/32759272/how-to-load-css-asynchronously --->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" media="none"
     onload="if(media!='all')media='all'" />
   <noscript>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
   </noscript>
-  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_purple-pink.min.css" media="none"
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-purple.min.css" media="none"
     onload="if(media!='all')media='all'" />
   <noscript>
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-purple.min.css" />
   </noscript>
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
-  <link rel="manifest" href="./site.webmanifest" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
   <title>Multiplication with while loops, in JS</title>
-  <link rel="canonical" href="https://lynn.lukose.github.io/ICD2O-Unit-6-01-lynn-lukose-07/" />
-</head>
+  </head>
 
-
-<body>
-  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-  <script src="./js/script.js"></script>
-  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-    <header class="mdl-layout__header">
-      <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">Multiplication with while loops, in JS</span>
-      </div>
-    </header>
-    <main class="mdl-layout__content">
-      <div class="right-image">
-        <img src="./images/multiplication.jpeg" alt="multiplication table" />
-      </div>
-      <div class="page-content">Multiplication with while loops, with JS</div>
-      <br />
-      <form>
-        <br />
-        <!-- Numeric Textfield -->
-        Enter the first number
-        <br />
-        <div class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="numberone" />
-          <label class="mdl-textfield__label" for="numberone">enter number...</label>
-          <!-- class "mdl-textfield__error" -->
-          <span class="mdl-textfield__error">Input is not a number!</span>
+  <body>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="./js/script.js"></script>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Multiplying with While Loop, in JS</span>
+        </div>
+      </header>
+      <main class="mdl-layout__content">
+        <div class="right-image">
+          <img src="./images/multiplication.jpeg" alt="Image of multiplication table." />
+        </div>
+        <div class="page-content">
+          Please enter two integers you want multiplied together.
         </div>
         <br />
-        <!-- Numeric Textfield -->
-        Enter the second number
+        <form>
+          <h6>Integer 1:</h6>
+          <div class="mdl-textfield mdl-js-textfield">
+            <!-- input pattern attribute -->
+            <input class="mdl-textfield__input" type="number" min="1" id="numberone" name="numberone" />
+            <!-- mdl-textfield__label -->
+            <label class="mdl-textfield__label" for="numberone">Enter first integer here...
+            </label>
+            <!-- class "mdl-textfield__error" -->
+            <span class="mdl-textfield__error">Input is not a valid number.</span>
+          </div>
+          <br />
+          <h6>Integer 2:</h6>
+          <div class="mdl-textfield mdl-js-textfield">
+            <!-- input pattern attribute -->
+            <input class="mdl-textfield__input" type="number" min="1" id="numbertwo" name="numbertwo" />
+            <!-- mdl-textfield__label -->
+            <label class="mdl-textfield__label" for="numbertwo">Enter second integer here...
+            </label>
+            <!-- class "mdl-textfield__error" -->
+            <span class="mdl-textfield__error">Input is not a valid number.</span>
+          </div>
+          <br />
+          <div>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" onclick="calculate()"
+              type="button">
+              Check
+            </button>
+          </div>
+        </form>
         <br />
-        <div class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="numbertwo" />
-          <label class="mdl-textfield__label" for="numbertwo">enter number...</label>
-          <!-- class "mdl-textfield__error" -->
-          <span class="mdl-textfield__error">Input is not a number!</span>
+        <div class="page-content-answer">
+          <div id="answer"></div>
         </div>
-        <br />
-        <!-- Accent-colored raised button with ripple -->
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          onclick="calculate()" type="button">
-          Calculate
-        </button>
-      </form>
-      <br />
-      <div class="page-content-answer">
-        <div id="results"></div>
-      </div>
-    </main>
-  </div>
-</body>
-</html>
+      </main>
+    </div>
+  </body>
+  </html>
