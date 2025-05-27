@@ -2,8 +2,8 @@
   "name": "Lynn's App",
   "short_name": "Lynn's App",
   "description": "Github Page for Lynn's App",
-  "scope": "/ICD2O-Unit-6-01-Lynn-Lukose-07/",
-  "start_url": "/ICD2O-Unit-6-01-Lynn-Lukose-07/",
+  "scope": "/ICD2O-Unit-6-01-lynn-lukose-07/",
+  "start_url": "/ICD2O-Unit-6-01-lynn-lukose-07/",
   "permissions": [
     "unlimitedStorage",
     "fullscreen"

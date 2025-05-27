@@ -1,7 +1,7 @@
-[![Mr Coxall's Super Linter](https://github.com/MTHS-ICD2O-1-2024/ICD2O-Unit-6-01-Lynn-Lukose-07/workflows/Mr%20Coxall's%20Super%20Linter/badge.svg)](https://github.com/MTHS-ICD2O-1-2024/ICD2O-Unit-6-01-Lynn-Lukose-07/actions)
+[![Mr Coxall's Super Linter](https://github.com/MTHS-ICD2O-1-2024/ICD2O-Unit-6-01-lynn-lukose-07/workflows/Mr%20Coxall's%20Super%20Linter/badge.svg)](https://github.com/MTHS-ICD2O-1-2024/ICD2O-Unit-6-01-lynn-lukose-07/actions)
 
 
-This site can be found at: [https://MTHS-ICD2O-1-2024.github.io/ICD2O-Unit-6-01-Lynn-Lukose-07](https://MTHS-ICD2O-1-2024.github.io/ICD2O-Unit-6-01-Lynn-Lukose-07)
+This site can be found at: [https://MTHS-ICD2O-1-2024.github.io/ICD2O-Unit-6-01-Lynn-Lukose-07](https://MTHS-ICD2O-1-2024.github.io/ICD2O-Unit-6-01-lynn-lukose-07)
 
 ---
 

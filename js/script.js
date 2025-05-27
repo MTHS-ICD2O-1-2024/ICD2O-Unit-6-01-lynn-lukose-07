@@ -10,8 +10,8 @@
  * Check servie worker.
  */
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICD2O-Unit-6-01-Lynn-Lukose-07/sw.js", {
-    scope: "/ICD2O-Unit-6-01-Lynn-Lukose-07/",
+  navigator.serviceWorker.register("/ICD2O-Unit-6-01-lynn-lukose-07/sw.js", {
+    scope: "/ICD2O-Unit-6-01-lynn-lukose-07/",
   })
 }
 //This function multiplies 2 numbers
